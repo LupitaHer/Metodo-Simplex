@@ -72,6 +72,11 @@ public class Vista extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton3.setText("CALCULAR Min");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,6 +181,10 @@ public class Vista extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //RESULTADOS
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // Min
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

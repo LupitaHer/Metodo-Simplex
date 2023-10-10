@@ -180,7 +180,101 @@ public class Vista extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //RESULTADOS Max
-        
+        jTextArea1.append(""El maximo negativo es\n");
+        jTextArea1.append(""+negativo+"\nla columna es\n");
+        for(int i=0; i<fila; i++) {
+            jTextArea1.append(""+v[i][c]+"\n");
+        } 
+        jTextArea1.append("\n");
+        jTextArea1.append("\n diviendo con la columna\n");
+        double menor= 0;
+        double v1[]=new double[fila-1];
+        int h=0;
+        for(int i=1; i<fila; i++) {
+        v1[h]=v[i][columna-1]/v[i][c];
+            jTextArea1.append(""+v[i][columna-1]+"/"+v[i][c]+"="+v1[h]+"\n");
+            h++;
+          }
+        menor=v1[0];
+         for(int i=0; i<fila-1; i++) {
+             if(v1[i]c=menor){
+                 menor=v1[i];
+                 f=i+1;
+                 }
+             } 
+        jTextArea1.append(""El menor de la division es:"+menor +¨\n");
+        double pivo=v[f][c];
+jTextArea1.append(""El pivote es:¨+pivo);
+
+         jTextArea1.append("\n proceso de convertir el pivote en 1\n diviendo toda la fila con el pivote\n");
+        for(int i=0; i<columna; i++) {
+            double va=v[f][i];
+            v[f][i]=v[f][i]/pivo;
+            jTextArea1.append(""+va+"/"+pivo+"="+v[f][i]+"\n");
+            } 
+            for(int i=1; i<fila; i++) {
+                 if(i==f){
+                     v2[i]="x"+(c+1);
+                     v3[i]=c+1;
+                         v4[i]=i;
+                  } 
+                  if(v3[i]<=0){
+                       v2[i]=¨d¨+(i);
+                  }
+             }
+                         jTextArea1.append("\n proceso \n");
+                 for(int i=0; i<fila; i++) {
+                 if(i!=f){
+                 jTextArea1.append("convirtiendo la columna del pivote en cero, en fila¨+(i+1)+¨\n\n");
+                 double guar=0;
+                 guar=-v[i][c];
+                         for(int j=1; j<columna; j++) {
+                         }
+                             double vaa=[i][j];
+                            [i][j]=guar*[f][j]+v[i][j];
+                           jTextArea1.append(""+guar+¨*¨v[f][j]+¨+¨+"+vaa+¨=¨+ v[i][j]+¨\n");
+                              }
+                          }
+                      }
+                      y1=1;
+                      for(int i=0; i<columna; i++) {
+                        if(i<columna1){
+                         jTextArea1.append("\tx¨+(i+1));
+                       }else if(i>=columna1 && i<columna-1) { 
+                            jTextArea1.append("\td¨+(y1));
+                                                        y1++;
+                            }else{
+                            jTextArea1.append("\t result¨);
+                         }
+                        }
+                        jTextArea1.append("\n");
+
+
+                        for(int i=0; i<fila; i++) {
+                            if(i!=0){
+                        jTextArea1.append(v2[i];
+                                }
+                           for(int j=0; j<columna; j++){   
+                          jTextArea1.append("\t¨+l.format(v[i][j]));
+                            }   
+                             jTextArea1.append("\n");
+                         }   
+                        jTextArea1.append("\n\n");
+                      }
+                      int y2=0;
+                     jTextArea1.append("Resultado\n");
+                    jTextArea1.append("z="+v[0][columna-1]+"\n¨);
+                    for(int i=1; i<fila; i++) {
+                        char m1[]=v2[i].toCharArray();
+                        if(m1[0]==¨x¨){
+                            jTextArea1.append(""+v2[i]+"="+v[v4][i]][columna-1]+"\n");
+                           }
+                      
+                       }
+                
+                    }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

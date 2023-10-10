@@ -290,7 +290,7 @@ jTextArea1.append(""El pivote es:¨+pivo);
         for(int i = 0; i < columna; i++){
             if(i < columna1){
                 jTextArea1.append("\t x" + (i+1));
-            }else if (i >= columna1 && i < columna - i){
+            }else if (i >= columna1 && i < columna - 1){
                 jTextArea1.append ("\t d" + (y1));
                 y1++;
             }else{
@@ -323,18 +323,18 @@ jTextArea1.append(""El pivote es:¨+pivo);
             }
             int f = 0, c= 0;
             double Maypositivo = 0;
-            for(int i = 0; i > columna1; i++){
-                if(v [0][i] > mayPositivo){
+            for(int i = 0; i < columna1; i++){
+                if(v [0][i] < mayPositivo){
                     mayPositivo = v [0][i];
                     c = i;
                 }
             }
-            jTextArea1.append("EL MAXIMO NEGATIVO ES\n");
+            jTextArea1.append("EL MAXIMO POSITIVO ES\n");
             jTextArea1.append("" + mayPositivo\n la columna es\n);
             for(int i = 0; i < fila; i++){
                 v1[h] = v [i][columna + 1] / v[i][c];
                 jTextArea1.append(" " + v[i][columna + 1]  + " / " + v[i][c] + " = " + v1[h] + " \n");
-                h++;
+                
             }
             jTextArea1.append("\n");
             jTextArea1.append("\n Dividiendo con la columna\n");
@@ -348,7 +348,7 @@ jTextArea1.append(""El pivote es:¨+pivo);
             }
             mayor = v1[0];
             for(int i; i< fila - 1; i++){
-                if(v1[i]<= menor){
+                if(v1[i]>= menor){
                     mayor = v1 [i];
                     f= i+1;
                 }

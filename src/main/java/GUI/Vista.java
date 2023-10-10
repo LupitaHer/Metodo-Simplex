@@ -185,7 +185,44 @@ public class Vista extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //RESULTADOS Min
-        
+        jTextArea1.append ("Metodo Simplex\n");
+        DecimalFormat 1 = new DecimalFormat("0.000");
+        int fila = Integer.parseInt (jTextField1.getText());
+        int columna = Integer.parseInt(jTextField2.getText());
+        int columna1 = columna;
+        columna = fila + columna;
+        double v[] [] = new double [fila][columna];
+        int y1 = 1;
+        for(int i = 0; i < columna; i++){
+            if(i < columna1){
+                jTextArea1.append("\t x" + (i+1));
+            }else if (i >= columna1 && i < columna - i){
+                jTextArea1.append ("\t d" + (y1));
+                y1++;
+            }else{
+                jTextArea1.append("\t resul");
+            }  
+        }
+        jTextArea1.append ("\n");
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                v[i][j] = Double.parseDouble(jTable2.getValueAt(i, j).toString());
+            }
+        }
+        for (int i = 0; i < fila; i++) {
+            if(i!=0){
+                jTextArea1.append("d"+i);
+            }
+            for (int j = 0; j < columna; j++) {
+                jTextArea1.append("\t " + l.format(v[i][j]));
+            }
+            jTextArea1.append("\n");
+        }
+        jTextArea1.append("\n\n");
+        String v2[] = new String [fila];
+        int v3 [] = new int [fila];
+        int v4 [] = new int [fila];
+        int co = 0;
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {

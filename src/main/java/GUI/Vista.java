@@ -180,6 +180,57 @@ public class Vista extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //RESULTADOS Max
+        jTextArea1.append("Metodo simplex\n");
+        DecimalFormat  l= new DecimalFormat("0.000");
+        int fila= Integer.parseInt(jTexField1.getText());
+        int columna = Integer.parseInt (jTextField2.getText());
+        int columna1= columna;
+        columna= fila+ columna; 
+        double v [][]= new double [fila][colomna];
+        int y1= 1;
+        for (int i= 0; i< columna; i++){
+            if (i< columna1){
+                jTextArea1.append("\t x" + (i+ 1));
+            } else if (i>= columna1 && i<columna-1){
+                jTextArea1.append("t\d" + (y1));
+                y1++;
+            }else{
+                jTextArea1.append ("\ t result");
+         }
+ }  
+
+        jTextArea1.append ("\n");
+        for (int i= 0; i< fila; i++);
+          for (int j= 0; j< columna; j++){
+              v [i][j]= Double.parseDouble (jTable2,getValueAt(i, j).toString ());
+          }
+}
+        for (int i= 0; i< fila; i++){
+            if (i!= 0){
+                jTextArea1.append ("d"+ i);
+            }
+            for (int j= 0; j< columna; j++){
+                jTextArea1.append("\t" + l.format( v [i][j]));
+            }
+            jTextArea1.append ("\n);
+        }
+        jTextArea1.append("\n\n");
+        String v2 [] = new String [fila];
+        int v3 [] = new int [fila];
+        int v4 [] = new int [fila];
+        int co= 0;
+        while (true){
+            if (co== columna1){
+                break;
+            }
+            int f= 0, c= 0;
+            double negativo= 0; 
+            for (int i= 0; i< columna1; i++){
+                if (v [0][i]<negativo){
+                negativo= v [0][i];
+                c= i; 
+            }
+        }  
         jTextArea1.append(""El maximo negativo es\n");
         jTextArea1.append(""+negativo+"\nla columna es\n");
         for(int i=0; i<fila; i++) {

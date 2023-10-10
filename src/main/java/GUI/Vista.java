@@ -149,7 +149,7 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //TABLA
+        //TABLA echo desde netbeans
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         int fila = Integer.parseInt(jTextField1.getText());
         int columna = Integer.parseInt(jTextField2.getText());

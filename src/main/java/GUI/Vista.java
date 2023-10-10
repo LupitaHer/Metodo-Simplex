@@ -179,11 +179,13 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //RESULTADOS
+        //RESULTADOS Max
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // Min
+        //RESULTADOS Min
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {

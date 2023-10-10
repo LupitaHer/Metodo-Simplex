@@ -317,6 +317,34 @@ jTextArea1.append(""El pivote es:¨+pivo);
         int v3 [] = new int [fila];
         int v4 [] = new int [fila];
         int co = 0;
+        while (true){
+            if (co == colmuna1){
+                break;
+            }
+            int f = 0, c= 0;
+            double Maypositivo = 0;
+            for(int i = 0; i > columna1; i++){
+                if(v [0][i] > mayPositivo){
+                    mayPositivo = v [0][i];
+                    c = i;
+                }
+            }
+            jTextArea1.append("EL MAXIMO NEGATIVO ES\n");
+            jTextArea1.append("" + mayPositivo\n la columna es\n);
+            for(int i = 0; i < fila; i++){
+                v1[h] = v [i][columna + 1] / v[i][c];
+                jTextArea1.append(" " + v[i][columna + 1]  + " / " + v[i][c] + " = " + v1[h] + " \n");
+                h++;
+            }
+            jTextArea1.append("\n");
+            jTextArea1.append("\n Dividiendo con la columna\n");
+            double mayor = 0;
+            double v1 [] = new double [fila - 1];
+            int h = 0;
+            for(int i = 1; i < fila; i++){
+                v1[h] = v[i][columna1 +1] / v [i][c];
+            }
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
